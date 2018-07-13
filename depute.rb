@@ -2,7 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-
+=begin
 def get_url
 page = Nokogiri::HTML(open("http://www2.assemblee-nationale.fr/deputes/liste/alphabetique"))
 url = page.xpath("//ul[@class ='col3']//a/@href")
@@ -14,6 +14,5 @@ email = doc.xpath(//*[@id="haut-contenu-page"]/article/div[3]/div/dl/dd[4]/ul/li
 email = email.to_s.delete_prefix!("mailto:")
 end
 
-
-
 depute
+=end
